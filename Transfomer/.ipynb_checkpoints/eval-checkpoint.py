@@ -28,6 +28,6 @@ def eval(val_loader, len_input, len_output, model, scaler, criterion, device):
             print('Prediction ended')
             break
     
-#     pred_hist = scaler.inverse_transform(pred_hist)
+    # pred_hist = scaler.inverse_transform(pred_hist)
 
     return pred_hist, loss_hist

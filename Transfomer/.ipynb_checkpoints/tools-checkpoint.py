@@ -1,3 +1,4 @@
+import os
 def early_stop(loss_hist, patience, skip= 0):
     #Skip the first n epochs
     if len(loss_hist) <= skip:
@@ -16,3 +17,7 @@ def early_stop(loss_hist, patience, skip= 0):
         return True
     else:
         return False
+    
+def maybe_make_dir(directory):
+    if not os.path.exists(directory):
+        os.makedirs(directory)

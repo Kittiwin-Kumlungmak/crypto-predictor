@@ -1,4 +1,5 @@
 import os
+
 def early_stop(loss_hist, patience, skip= 0):
     #Skip the first n epochs
     if len(loss_hist) <= skip:
